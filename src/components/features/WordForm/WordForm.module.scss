@@ -1,0 +1,148 @@
+@import '../../../styles/settings.scss';
+
+.fom {
+  color: $primary-text-color;
+  font-weight: bold;
+  position: fixed;
+  left: 50%;
+  top: -7px;
+  padding: 1em;
+  border-radius: 0 0 10px 10px;
+  width: 50%;
+  height: 50vh;
+  z-index: 22;
+  transform: translate(-50%, -93%);
+  transition: transform .2s ease;
+
+  input[type="text"] {
+    color: $najciemniejszy;
+    font-weight: bold;
+    background: $primary-text-color;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
+  &.slideDown {
+    transform: translate(-50%, 0);
+  }
+
+  .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    padding: 3em 2em;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    z-index: 2;
+    transform: translate(-50%, 0);
+    background: $najciemniejszy;
+    transition: 0.5s ease-in;
+
+    .imtra {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    
+
+    .text {
+      margin-inline: auto;
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-weight: bold;
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem;
+      border: 5px dashed $primary-text-color;
+      border-radius: 10%;
+      font-size: 2rem;
+      cursor: pointer;
+      color: $primary-text-color;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .addBtn {
+    border: none;
+    background: $primary-text-color;
+    color: $najciemniejszy;
+    text-transform: uppercase;
+    padding: 10px 2em;
+    margin-left: 150px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .icon {
+    margin-top: 15px;
+  }
+}
+
+.tglButton {
+  position: absolute;
+  bottom: -31px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 22;
+  text-align: center;
+  transition: .5s transform ease;
+  background: $najciemniejszy ;
+  border-radius: 0 0 10px 10px;
+  font-size: 1.2rem;
+  min-width: 100px;
+  height: 55px;
+}
+
+@media (max-width: 1000px) {
+  .fom {
+    width: 100%;
+    height: 60vh;
+    transform: translate(-50%, -360px);
+    .wrapper {
+      max-width: 90%;
+      height: 100%;
+
+      .text {
+        width: 50%;
+      }
+
+      label {
+        width: 50%;
+        text-align: center;
+      }
+      .addBtn {
+        position: absolute;
+        left: -85px;
+      }
+    }
+
+    .tglButton {
+      bottom: -50px;
+    }
+  }
+
+}
+.icon {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}

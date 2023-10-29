@@ -1,0 +1,47 @@
+{
+  "words": [
+    {
+      "id": 2,
+      "translation": "dupa",
+      "image": "https://www.shutterstock.com/image-photo/close-sativa-cannabis-daylight-leaf-260nw-2087149594.jpg",
+      "test1": "t1",
+      "test2": "t2",
+      "isKnown": true
+    },
+    {
+      "id": "2ba504d6-329e-462b-9f00-6f6fd3e5e769",
+      "translation": "test",
+      "image": "https://www.shutterstock.com/image-photo/close-sativa-cannabis-daylight-leaf-260nw-2087149594.jpg",
+      "test1": "test",
+      "test2": "test",
+      "isKnown": false
+    },
+    {
+      "id": "9e6ba8ad-b1b2-4f0b-bc5f-419e0d130ebb",
+      "translation": "kik",
+      "image": "https://www.shutterstock.com/image-photo/close-sativa-cannabis-daylight-leaf-260nw-2087149594.jpg",
+      "test1": "kik",
+      "test2": "kik",
+      "isKnown": false
+    },
+    {
+      "id": "0c62d9a0-511f-4a7c-9f78-83707631862c",
+      "translation": "w",
+      "image": "https://www.shutterstock.com/image-photo/close-sativa-cannabis-daylight-leaf-260nw-2087149594.jpg",
+      "test1": "r",
+      "test2": "r",
+      "isKnown": false
+    }
+  ],
+
+  "images": [
+    {
+      "id": 1,
+      "url": "images/char1"
+    },
+    {
+      "id": 2,
+      "url": "images/char1"
+    }
+  ]
+}

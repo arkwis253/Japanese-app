@@ -1,0 +1,61 @@
+@import '../../../styles/settings.scss';
+
+.wrapper {
+  padding: 1em; 
+  position: relative;
+  background: #353535;
+  color: $primary-text-color;
+  border-radius: 10px;
+  line-height: 1;
+
+  .image {
+    width: 100%;
+  
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: fill;
+    }    
+  }
+
+  .translation {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .text > h2 {
+    margin: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+
+
+    display: flex;
+    justify-content: flex-end;
+
+    & button {
+      font-size: 1.2rem;
+      height: 30px;
+      font-weight: bold;
+      
+    }
+  }
+
+  .deleteBtn {
+
+  }
+}
+
+
+@media (max-width: 600px) {
+  * {
+    font-size: 1rem;
+  }  
+
+  .deleteBtn {
+    font-size: 0.8rem;
+    
+  }
+}

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Container from './components/common/Container/Container';
+import Navbar from './components/views/Navbar/Navbar';
+import Content from './components/views/Content/Content';
+import Home from './components/pages/Home/Home';
+import Known from './components/pages/Known/Known';
+import Unknown from './components/pages/Unknown/Unknown';
+import NotFound from './components/pages/NotFound/NotFound';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchWords } from './redux/wordsRedux';
+import WordForm from './components/features/WordForm/WordForm';
+import { fetchImages } from './redux/imagesRedux';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => dispatch(fetchWords()), [dispatch]);
+  useEffect(() => dispatch(fetchImages()), [dispatch]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Navbar />
+      <WordForm />
+      <Content>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/known" element={<Known />} />
+          <Route path="/unknown" element={<Unknown />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Content>
+    </Container>
   );
 }
 

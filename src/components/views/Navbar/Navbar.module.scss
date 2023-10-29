@@ -1,0 +1,67 @@
+@import '../../../styles/settings.scss';
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  width: 75px;
+  z-index: 1;
+  background: #111;
+  overflow-x: hidden;
+  transition: 0.2s all ease;
+  white-space: nowrap;
+  text-align: left;
+  
+  ul {
+    list-style-type: none;
+    padding: 1em;
+  }
+
+  li {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+
+  a {
+    padding: 10px;
+    text-decoration: none;
+    color: $bialy;
+    
+  }
+
+  .active {
+    color: #B9C6AE;
+  }
+}
+
+.toggle {
+  width: 200px;
+}
+
+.icon {
+  padding-right: 30px;
+  width: 25px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 75px;
+  }
+
+  .menuIcon {
+    color: $bialy;
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .toggle {
+    width: 200px;
+
+    li {
+      display: block;
+    }
+  }
+
+  li {display: none;}
+}
