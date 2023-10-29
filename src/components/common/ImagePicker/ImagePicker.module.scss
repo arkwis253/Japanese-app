@@ -1,10 +1,49 @@
-.charImage {
-  width: 50px;
-  height: 50px;
+@import '../../../styles/settings.scss';
+
+.charImages {
+  transition: 1s;
+  opacity: 100;
+  width: 90vw;
+  height: 90vh;
+  top: 20%;
+  overflow-y: scroll;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: #000;
+  z-index: 33;
+  overflow-x: hidden;
 
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
   }
 }
+
+.wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 3rem;
+}
+
+.uploadLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem;
+  border: 5px dashed $primary-text-color;
+  border-radius: 10%;
+  font-size: 2rem;
+  cursor: pointer;
+  color: $primary-text-color;
+  width: 100%;
+  height: 100%;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+

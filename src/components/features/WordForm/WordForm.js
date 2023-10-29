@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { addWordRequest } from '../../../redux/wordsRedux';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4} from 'uuid';
+import ImagePicker from '../../common/ImagePicker/ImagePicker';
 
 const WordForm = props => {
   const dispatch = useDispatch();
@@ -13,14 +14,15 @@ const WordForm = props => {
   const [tekst2, setTekst2] = useState('');
   const newId = uuidv4();
   const menuRef = useRef();
-  const [toggleImagePicker, setToggleImagePicker] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+ 
 
   const formHandler = e => {
     e.preventDefault();
     const newWord = {
       id: newId,
       translation: translation,
-      image: '',
+      image: selectedImage,
       test1: tekst1,
       test2: tekst2,
       isKnown: false
@@ -34,16 +36,14 @@ const WordForm = props => {
 
   useEffect(() => {
     const handler = e => {
-      if(!menuRef.current.contains(e.target))
-      setToggleForm(false);
+      if(menuRef.current && !menuRef.current.contains(e.target))
+        setToggleForm(false);
     };
 
     document.addEventListener("mousedown", handler);
   }, []);
 
-  const pickImageHandler = () => {
-    setToggleImagePicker(!toggleImagePicker);
-  }
+ 
 
   return (
     <>
@@ -66,9 +66,8 @@ const WordForm = props => {
             </div>
           </div>
           <h2>{props.translation}</h2>
-          <label className={styles.image} onClick={pickImageHandler}>
-            Upload image
-          </label>
+          
+          <ImagePicker setSelectedImage={setSelectedImage}/>
         </div>
         <button type="submit" className={styles.addBtn}>Add</button>
       </div>

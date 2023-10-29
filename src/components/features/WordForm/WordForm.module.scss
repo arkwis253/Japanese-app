@@ -5,11 +5,10 @@
   font-weight: bold;
   position: fixed;
   left: 50%;
-  top: -7px;
-  padding: 1em;
+  top: -70px;
   border-radius: 0 0 10px 10px;
   width: 50%;
-  height: 50vh;
+  height: 50%;
   z-index: 22;
   transform: translate(-50%, -93%);
   transition: transform .2s ease;
@@ -33,13 +32,14 @@
     position: absolute;
     left: 50%;
     top: 0;
-    padding: 3em 2em;
+    padding: 5em 2em;
     border-radius: 0 0 10px 10px;
     width: 100%;
     z-index: 2;
     transform: translate(-50%, 0);
     background: $najciemniejszy;
     transition: 0.5s ease-in;
+    height: 450px;
 
     .imtra {
       display: flex;
@@ -58,27 +58,8 @@
       font-weight: bold;
     }
 
-    .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5rem;
-      border: 5px dashed $primary-text-color;
-      border-radius: 10%;
-      font-size: 2rem;
-      cursor: pointer;
-      color: $primary-text-color;
-
-      input[type="file"] {
-        display: none;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
+    
+    
   }
   
   .addBtn {
@@ -86,7 +67,7 @@
     background: $primary-text-color;
     color: $najciemniejszy;
     text-transform: uppercase;
-    padding: 10px 2em;
+    padding: 1em 2em;
     margin-left: 150px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -100,7 +81,7 @@
 
 .tglButton {
   position: absolute;
-  bottom: -31px;
+  bottom: -120px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 22;
@@ -120,7 +101,7 @@
     transform: translate(-50%, -360px);
     .wrapper {
       max-width: 90%;
-      height: 100%;
+      height: 100vh;
 
       .text {
         width: 50%;
